@@ -57,8 +57,8 @@ Expo CLI
 
 Firebase project set up
 
-Clone the repository
-git clone https://github.com/<username>/<repo>.git
+Clone the repository 
+git clone https://github.com/jerrys-arch/task_master.git
 cd task-manager-mobile
 
 Install dependencies
