@@ -1,50 +1,128 @@
-# Welcome to your Expo app 👋
+Task Manager Mobile App
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern, user-friendly task management mobile app built with React Native, Firebase, and Expo. Track your daily tasks, toggle completion, sort by date, and manage your personal tasks securely with Firebase authentication.
 
-## Get started
+📱 Features
 
-1. Install dependencies
+User Authentication
 
-   ```bash
-   npm install
-   ```
+Sign up & login using Firebase Authentication
 
-2. Start the app
+Persistent user sessions
 
-   ```bash
-   npx expo start
-   ```
+Task Management
 
-In the output, you'll find options to open the app in a
+Add, delete, and toggle task completion
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Tasks stored per user in Firestore
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+Sort tasks by date
 
-## Get a fresh project
+UI/UX
 
-When you're ready, run:
+Modern and responsive design
 
-```bash
-npm run reset-project
-```
+Keyboard avoiding input fields
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Dark mode toggle (planned / optional)
 
-## Learn more
+Search functionality (planned / optional)
 
-To learn more about developing your project with Expo, look at the following resources:
+Navigation
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Welcome screen with app title & description
 
-## Join the community
+Login & SignUp screens
 
-Join our community of developers creating universal apps.
+Home screen with user-specific tasks
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+🛠️ Tech Stack
+
+Frontend: React Native, Expo
+
+Backend / Database: Firebase Authentication, Firestore
+
+State Management: React Hooks
+
+Navigation: React Navigation (Stack Navigator)
+
+Styling: React Native Stylesheets
+
+🚀 Getting Started
+Prerequisites
+
+Node.js ≥ 18
+
+Expo CLI
+
+Firebase project set up
+
+Clone the repository
+git clone https://github.com/<username>/<repo>.git
+cd task-manager-mobile
+
+Install dependencies
+npm install
+
+Run the app
+expo start
+
+
+Open the app on:
+
+iOS: Expo Go app
+
+Android: Expo Go app or emulator
+
+Web: http://localhost:8081
+
+📁 Project Structure
+task-manager-mobile/
+│
+├─ src/
+│  ├─ assets/           # Images and icons
+│  ├─ firebase/         # Firebase config & utils
+│  ├─ hooks/            # Custom hooks (useTasks)
+│  ├─ screens/          # App screens (Home, Login, SignUp, Welcome)
+│  └─ components/       # UI components (TaskList)
+│
+├─ App.tsx              # Main app entry with Stack Navigator
+└─ package.json
+
+⚡ Usage
+
+Open the app
+
+Signup or login
+
+Add tasks
+
+Toggle completion or delete tasks
+
+Tasks are synced per user in Firebase Firestore
+
+🎨 Design
+
+Modern and minimal design
+
+Welcome screen with app icon, title, and description
+
+Responsive buttons and input fields
+
+Keyboard-aware input fields on mobile
+
+🔧 Future Improvements
+
+Dark mode support
+
+Search bar to filter tasks
+
+Sorting tasks by different criteria (priority, custom date)
+
+Notifications for pending tasks
+
+Offline mode support
+
+📄 License
+
+This project is MIT licensed.
