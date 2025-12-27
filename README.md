@@ -76,18 +76,6 @@ Android: Expo Go app or emulator
 
 Web: http://localhost:8081
 
-📁 Project Structure
-task-manager-mobile/
-│
-├─ src/
-│  ├─ assets/           # Images and icons
-│  ├─ firebase/         # Firebase config & utils
-│  ├─ hooks/            # Custom hooks (useTasks)
-│  ├─ screens/          # App screens (Home, Login, SignUp, Welcome)
-│  └─ components/       # UI components (TaskList)
-│
-├─ App.tsx              # Main app entry with Stack Navigator
-└─ package.json
 
 ⚡ Usage
 
