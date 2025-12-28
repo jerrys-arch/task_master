@@ -8,34 +8,30 @@ interface Props {
 const WelcomeScreen: React.FC<Props> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      {/* App Icon */}
-      <Image
-        source={require('../../assets/task-icon.png')} // Add your icon in assets
-        style={styles.icon}
-      />
+      {/* Header Section */}
+      <View style={styles.headerSection}>
+        <View style={styles.iconTitleRow}>
+          <Image source={require('../../assets/task-icon.png')} style={styles.icon} />
+          <Text style={styles.title}>Task Manager</Text>
+        </View>
+        <Text style={styles.description}>
+          Organize your tasks efficiently, stay focused, and never miss a deadline!
+        </Text>
+      </View>
 
-      {/* App Title */}
-      <Text style={styles.title}>Task Manager</Text>
+      {/* Action Buttons */}
+      <View style={styles.buttonContainer}>
+        <TouchableOpacity style={styles.primaryButton} onPress={() => navigation.navigate('Login')}>
+          <Text style={styles.primaryButtonText}>Get Started</Text>
+        </TouchableOpacity>
 
-      {/* App Description */}
-      <Text style={styles.description}>
-        Organize your tasks efficiently, stay focused, and never miss a deadline!
-      </Text>
-
-      {/* Buttons */}
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate('Login')}
-      >
-        <Text style={styles.buttonText}>Login</Text>
-      </TouchableOpacity>
-
-      <TouchableOpacity
-        style={[styles.button, styles.signUpButton]}
-        onPress={() => navigation.navigate('SignUp')}
-      >
-        <Text style={[styles.buttonText, styles.signUpText]}>Sign Up</Text>
-      </TouchableOpacity>
+        <TouchableOpacity 
+          style={styles.secondaryButton} 
+          onPress={() => navigation.navigate('SignUp')}
+        >
+          <Text style={styles.secondaryButtonText}>Create Account</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 };
@@ -45,47 +41,99 @@ export default WelcomeScreen;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 20,
     backgroundColor: '#f3f4f6',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    paddingTop: 120,
+    paddingBottom: 20,
+    paddingHorizontal: 24,
+  },
+  headerSection: {
+    backgroundColor: '#fff',
+    borderRadius: 24,
+    padding: 32,
+    height: 240,
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 10,
+    },
+    shadowOpacity: 0.1,
+    shadowRadius: 20,
+    elevation: 10,
+    maxWidth: 340,
+    width: '100%',
+  },
+  iconTitleRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    marginBottom: 16,
   },
   icon: {
-    width: 120,
-    height: 120,
-    marginBottom: 20,
+    width: 80,
+    height: 80,
+    marginRight: 20,
   },
   title: {
     fontSize: 32,
-    fontWeight: 'bold',
+    fontWeight: '800',
     color: '#4f46e5',
-    marginBottom: 10,
+    lineHeight: 36,
+    flexShrink: 1,
   },
   description: {
     fontSize: 16,
     color: '#555',
+    lineHeight: 22,
     textAlign: 'center',
-    marginBottom: 30,
   },
-  button: {
-    width: '80%',
+  buttonContainer: {
+    width: '100%',
+    maxWidth: 340,
+    gap: 16,
+  },
+  primaryButton: {
     backgroundColor: '#4f46e5',
-    padding: 15,
-    borderRadius: 10,
+    paddingVertical: 20,
+    paddingHorizontal: 32,
+    borderRadius: 16,
     alignItems: 'center',
-    marginBottom: 15,
+    shadowColor: '#4f46e5',
+    shadowOffset: {
+      width: 0,
+      height: 6,
+    },
+    shadowOpacity: 0.3,
+    shadowRadius: 12,
+    elevation: 10,
   },
-  buttonText: {
+  primaryButtonText: {
     color: '#fff',
     fontSize: 18,
-    fontWeight: 'bold',
+    fontWeight: '700',
+    letterSpacing: 0.5,
   },
-  signUpButton: {
+  secondaryButton: {
     backgroundColor: '#fff',
-    borderWidth: 1,
+    paddingVertical: 20,
+    paddingHorizontal: 32,
+    borderRadius: 16,
+    alignItems: 'center',
+    borderWidth: 2,
     borderColor: '#4f46e5',
+    shadowColor: '#000',
+    shadowOffset: {
+      width: 0,
+      height: 4,
+    },
+    shadowOpacity: 0.12,
+    shadowRadius: 12,
+    elevation: 6,
   },
-  signUpText: {
+  secondaryButtonText: {
     color: '#4f46e5',
+    fontSize: 18,
+    fontWeight: '700',
+    letterSpacing: 0.5,
   },
 });
