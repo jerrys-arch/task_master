@@ -22,14 +22,6 @@ UI/UX
 
 Modern and responsive design
 
-Keyboard avoiding input fields
-
-Dark mode toggle (planned / optional)
-
-Search functionality (planned / optional)
-
-Navigation
-
 Welcome screen with app title & description
 
 Login & SignUp screens
@@ -99,17 +91,7 @@ Responsive buttons and input fields
 
 Keyboard-aware input fields on mobile
 
-🔧 Future Improvements
 
-Dark mode support
-
-Search bar to filter tasks
-
-Sorting tasks by different criteria (priority, custom date)
-
-Notifications for pending tasks
-
-Offline mode support
 
 📄 License
 
